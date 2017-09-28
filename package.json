@@ -1,0 +1,25 @@
+{
+  "name": "snapdom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava --verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ]
+  },
+  "dependencies": {
+    "virtual-dom": "^2.1.1"
+  }
+}
