@@ -1,6 +1,6 @@
 import test from "ava";
-import { snap } from "..";
-import { synchronous } from "../stateManagers";
+import { snap } from "../src";
+import { synchronous } from "../src/stateManagers";
 import { h, diff } from "virtual-dom";
 
 const cmp = set => {
