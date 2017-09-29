@@ -13,6 +13,7 @@
     "ava": "^0.22.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.0",
+    "typescript": "^2.5.3",
     "virtual-dom": "^2.1.1"
   },
   "ava": {
