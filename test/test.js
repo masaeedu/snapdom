@@ -13,10 +13,17 @@ const cmp = set => {
     h("div", [h("div", ["Hello, ", state]), h("input", handlers)]);
 };
 
-const state = synchronous({ name: "Bob" }, "name");
+const getState = () => synchronous({ name: "Bob" }, "name");
 
-test(`it mounts components`, t => {
+test(`it renders state`, t => {
+  const state = getState();
   const mount = snap(cmp)(state);
-  const target = x => t.snapshot(x);
-  mount(target);
+  mount(x => t.snapshot(x));
+});
+
+test(`it renders updated state`, t => {
+  const state = getState();
+  const mount = snap(cmp)(state);
+  mount(x => t.snapshot(x));
+  state.set("Carol");
 });
