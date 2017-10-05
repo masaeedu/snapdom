@@ -2,15 +2,16 @@ import test from "ava";
 import { snap } from "../src";
 import { synchronous } from "../src/stateManagers";
 import { h, diff } from "virtual-dom";
+import { Component } from "../src/types";
 
-const cmp = set => {
+const cmp: Component<string, VirtualDOM.VTree> = set => {
   const handlers = {
     on: {
-      input: e => set(e.target.value)
+      input: (e: any) => set(e.target.value)
     }
   };
   return state =>
-    h("div", [h("div", ["Hello, ", state]), h("input", handlers)]);
+    h("div", [h("div", ["Hello, ", state]), h("input", handlers as any)]);
 };
 
 const getState = () => synchronous({ name: "Bob" }, "name");
