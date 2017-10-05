@@ -1,8 +1,8 @@
 import test from "ava";
 import { snap } from "../src";
+import { Component } from "../src/types";
 import { synchronous } from "../src/stateManagers";
 import { h, diff } from "virtual-dom";
-import { Component } from "../src/types";
 
 const cmp: Component<string, VirtualDOM.VTree> = set => {
   const handlers = {
